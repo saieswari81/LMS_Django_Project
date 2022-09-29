@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "c243641c-ba22-4e3f-a1e6-ae2dba0fe309",
+		"name": "LMS Django Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21049965"
+	},
+	"item": [
+		{
+			"name": "Get All Customer Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/customer/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show the Loan Rules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/loan_rules/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"loan_rules",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show the Loan Master",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/loan_master/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"loan_master",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": \"10\",\r\n    \"customer_name\": \"XYZ\",\r\n    \"application_date\": \"2022-09-01\",\r\n    \"customer_creditscore\": \"555\",\r\n    \"customer_req_loanamount\": \"23456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/customer/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show loan status/possibilities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": \"20\",\r\n    \"customer_name\": \"XYZXYZ\",\r\n    \"application_date\": \"2022-09-01\",\r\n    \"customer_creditscore\": \"355\",\r\n    \"customer_req_loanamount\": \"23456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/show_status_single_customer/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"show_status_single_customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer Data",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_creditscore\": \"145\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/customer/111/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"customer",
+						"111",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Single Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/customer/111/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"customer",
+						"111",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Customer Details by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/lms/customer/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"lms",
+						"customer",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
