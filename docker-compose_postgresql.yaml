@@ -1,0 +1,24 @@
+version: '3'
+services:
+    database:
+        image: 'postgres:latest'
+        restart: always
+        volumes: 
+          - ./db-data:/var/lib/postgresql/data
+          # copy the sql script to create tables
+          - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+          # copy the sql script to fill tables
+          - ./sql/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
+        ports:
+          - '5432:5432'
+        environment:
+          POSTGRES_USER: syntaxboard
+          POSTGRES_PASSWORD: syntaxboard
+          POSTGRES_DB: syntaxboard
+        logging:
+          options:
+            max-size: 10m
+            max-file: "3"
+        
+        
+          
